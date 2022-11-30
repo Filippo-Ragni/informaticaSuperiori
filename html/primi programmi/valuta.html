@@ -1,0 +1,35 @@
+<HTML>
+	<HEAD>
+		<SCRIPT>
+			const tassoconv=0.99;
+			function eudo()
+			{
+				var doll;
+				var eu;
+				doll=document.getElementById("txtDollari").value;
+				eu = (doll*tassoconv);
+				eu.toFixed(2);
+				document.getElementById("txtEuro").value = eu;
+			}
+			function doeu()
+			{
+				var eu;
+				var doll;
+				eu=document.getElementById("txtEuro").value;
+				doll = (eu/tassoconv);
+				doll.toFixed(2);
+				document.getElementById("txtDollari").value = doll;
+			}
+		</SCRIPT>
+	</HEAD>
+	<BODY>
+		<FIELDSET>
+		<LEGEND>CONVERTITORE DI VALUTA</LEGEND>
+			Dollari:<INPUT type="number" id="txtDollari"/>
+			Euro:<INPUT type="number" id="txtEuro"/>
+			<BR/><BR/>
+			<INPUT type="button" value="Da $ a €" onclick="eudo();"/>
+			<INPUT type="button" value="Da € a $" onclick="doeu();"/>
+		</FIELDSET>
+	</BODY>
+</HTML>

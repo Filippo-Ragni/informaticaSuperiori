@@ -1,0 +1,49 @@
+<HTML>
+	<HEAD>
+		<SCRIPT>
+            var clk = 0;
+
+            const addClick = () => {
+                clk += 1;
+            };
+
+			setInterval(() => 
+            {
+                document.getElementById("sec").value-=1;
+                if(document.getElementById("sec").value == 0) {
+                    document.getElementById("sec").value = 5;
+                }
+			}
+			, 1000);
+
+			setInterval(() => 
+            {
+                if (clk > document.getElementById("rec").value)
+                {
+                    document.getElementById("rec").value = clk;
+                }
+
+                clk =0;
+			}
+			, 5000);
+		</SCRIPT>
+	</HEAD>
+	
+	<BODY>
+	<H1> Il gioco del click </H1>
+	<INPUT type="button" value = "CLICK"  onclick= "addClick();"/>
+	<BR> <BR>
+	
+	<form>
+        MANCANO 
+        <input type="number" id="sec" value="5" disabled/> 
+        SECONDI
+
+        <BR/><BR/>
+
+        RECORD: 
+        <input type="number" id="rec" value="" disabled/> 
+    </form> 
+	
+	</BODY>
+</HTML>

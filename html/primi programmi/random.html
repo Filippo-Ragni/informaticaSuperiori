@@ -1,0 +1,17 @@
+<HTML>
+	<HEAD>
+		<SCRIPT>
+			function lancioDado()
+			{
+			const MAX= 6;
+			var num = Math.trunc(MAX*Math.random())+1;
+			document.getElementById("txtRisultato").value=num;
+			}
+		</SCRIPT>
+	</HEAD>
+	<BODY>
+		<INPUT type="button" value = "LANCIA" onclick="lancioDado();" />
+		<BR> <BR>
+		<INPUT type="number" id="txtRisultato"/>
+	</BODY>
+</HTML>

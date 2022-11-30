@@ -1,0 +1,58 @@
+<HTML>
+
+	<HEAD>
+	
+    	<STYLE> 
+		
+			img {height:40%;
+			     width:30%}
+
+		</STYLE>
+		
+		<SCRIPT>
+		
+			function lancio(){
+                var lancio = "lancia.jpg";
+                document.getElementById("grafica").src=lancio;
+            }   
+			
+			function risultato(){
+				const MAX = 6;
+				var num = Math.trunc(MAX*Math.random())+1;
+				if (num == 1){
+					var gra = "1.jpg";
+					document.getElementById("grafica").src=gra;
+				}
+				if (num == 2){
+					var gra = "2.jpg";
+					document.getElementById("grafica").src=gra;
+				}
+				if (num == 3){
+					var gra = "3.jpg";
+					document.getElementById("grafica").src=gra;
+				}
+				if (num == 4){
+					var gra = "4.jpg";
+					document.getElementById("grafica").src=gra;
+				}
+				if (num == 5){
+					var gra = "5.jpg";
+					document.getElementById("grafica").src=gra;
+				}
+				if (num == 6){
+					var gra = "6.jpg";
+					document.getElementById("grafica").src=gra;
+				}
+            }
+			
+		</SCRIPT>
+		
+	</HEAD>
+
+	<BODY>
+		
+		<img src="0.jpg" id="grafica" onmouseover="lancio();" onmouseout="risultato();">
+		
+	</BODY>
+
+</HTML>

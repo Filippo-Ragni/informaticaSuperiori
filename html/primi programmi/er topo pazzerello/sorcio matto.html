@@ -1,0 +1,26 @@
+<html>
+	<head>
+    	<style> 
+			img {height:40%;
+			     width:30%}
+			body{text-align:center}
+		</style>
+		<script>
+			function cambiaImg1(){
+                var Imgpiscio = "download.jpg";
+                document.getElementById("imgcane").src=Imgpiscio;
+                document.getElementById("titolo").innerHTML = "HAI FATTO PISCIARE IL CANE";
+            }      
+			function cambiaImg2(){
+                var cane = "4-idee-per-creare-una-cuccia-per-tuo-cane-fai-da-te2-900x600.jpg";
+                document.getElementById("imgcane").src=cane;
+                document.getElementById("titolo").innerHTML = "CANE";
+            }				 
+              
+		</script>
+	</head>
+	<body>
+			<h1 id="titolo">CANE</h1>
+			<img src="4-idee-per-creare-una-cuccia-per-tuo-cane-fai-da-te2-900x600.jpg" id="imgcane" onmouseover="cambiaImg1();" onmouseout="cambiaImg2();">
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script>
+            setInterval(() => {
+                const valueToAdd = document.getElementById("range_input").value
+                document.getElementById("lista_numeri").innerHTML += `<li> ${valueToAdd} </li>`
+            }, 2000)
+
+            const pulisci = () => {
+                document.getElementById("lista_numeri").innerHTML = ""
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <input 
+                type="range" 
+                id="range_input" 
+                min="0" 
+                max="100"
+                step="5" 
+            />
+        </form>
+
+        <button onClick="pulisci()"> PULISCI </button>
+
+        <ul id="lista_numeri">
+
+        </ul>
+    </body>
+</html>

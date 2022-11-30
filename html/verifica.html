@@ -1,0 +1,110 @@
+<HTML>
+	<HEAD>
+	<SCRIPT>
+	
+		var I = 0;
+		var arNomi_fr = new Array();
+		var arCitta_fr = new Array();
+		var arPosti_fr = new Array();
+		
+		function inserisciDati(){
+			arNomi_fr[I] = document.getElementById("stadio").value;
+			document.getElementById("stadio").value = "";
+			arCitta_fr[I] = document.getElementById("citta").value;
+			document.getElementById("citta").value = "";
+			arPosti_fr[I] = Number(document.getElementById("nPosti").value);
+			document.getElementById("nPosti").value = "";
+			I = I+1;
+			
+			document.getElementById("txtDati").value = "";
+			for (var i=0; i < I; i++){
+				var testo = document.getElementById("txtDati").value;
+				testo = testo + arNomi_fr[i];
+				testo = testo + " " + arCitta_fr[i];
+				testo = testo + " " + arPosti_fr[i];
+				testo = testo + "\n";
+				document.getElementById("txtDati").value = testo;
+				
+			}
+		}
+		
+		function modDati(){
+		
+			var indice = prompt("indice: ");
+			arNomi_fr[indice] = prompt("nome ");
+			arCitta_fr[indice] = prompt("citta ");
+			arPosti_fr[indice] = Number(prompt("posti "));
+		
+			document.getElementById("txtDati").value = "";
+			for (var i=0; i < I; i++){
+				var testo = document.getElementById("txtDati").value;
+				testo = testo + arNomi_fr[i];
+				testo = testo + " " + arCitta_fr[i];
+				testo = testo + " " + arPosti_fr[i];
+				testo = testo + "\n";
+				document.getElementById("txtDati").value = testo;
+				
+			}
+		
+		}
+		
+		function minPosti(){
+		
+			var minPosti = arPosti_fr[0];
+			var indiceMin = 0;
+		
+			for (var i=0; i < I; i++){
+				if (arPosti_fr[i] < minPosti){
+					minPosti = arPosti_fr[i];
+					indiceMin = i;
+				}	
+			}
+			
+			alert(arNomi_fr[indiceMin]);
+		
+		}
+		
+		function maxPosti(){
+		
+			var maxPosti = arPosti_fr[0];
+			var indiceMax = 0;
+		
+			for (var i=0; i < I; i++){
+				if (arPosti_fr[i] > maxPosti){
+					maxPosti = arPosti_fr[i];
+					indiceMax = i;
+				}	
+			}
+			
+			alert(arNomi_fr[indiceMax]);
+		
+		}
+	
+		
+	</SCRIPT>
+	</HEAD>
+	<BODY>
+	
+		<H1>GESTIONE STADI</H1>
+		<FIELDSET>
+		nome stadio: <INPUT type = "text" id = "stadio"/><BR/>
+		città: <INPUT type = "text" id = "citta"/><BR/>
+		numero di posti: <INPUT type = "number" id = "nPosti"/><BR/>
+		anello di atletica: <INPUT type = "RADIO" name="rbanat" value="si" /> SI <INPUT type = "RADIO" name="rbanat" value="no" /> NO 
+		</FIELDSET><BR/><BR/>
+		<INPUT type = "button" value = "INSERISCI" 
+		onclick = "inserisciDati();" />
+		<INPUT type = "button" value = "MODIFICA"
+		onclick = "modDati();"		/>
+		<INPUT type = "button" value = "MASSIMO" 
+		onclick = "maxPosti();"/>
+		<INPUT type = "button" value = "MINIMO" 
+		onclick = "minPosti();"/>
+		<BR/><BR/>
+		Elenco stadi: <BR/>
+		<textarea id = "txtDati"> </textarea>
+	
+	</BODY>
+
+
+</HTML>

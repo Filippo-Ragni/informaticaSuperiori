@@ -1,0 +1,14 @@
+table, td, th
+	{border:1px solid #000; 
+	border-collapse:collapse}
+	
+td, th
+	{padding:10px 10px 10px 10px}
+
+
+tr.odd 
+    {background: #66CCFF}
+tr.even 
+    {background: #CCFFFF}    
+tr.title
+    {background: #77eb34}

@@ -1,0 +1,79 @@
+<HTML>
+	<HEAD>
+		<SCRIPT>
+			
+			const DIM = 3;
+			var arNomi = new Array();
+			var arCognomi = new Array();
+			var arPunti = new Array();
+			var arRicezioni = new Array();
+			
+			function insDati(){
+				for (var i=0; i < DIM; i++){
+					arNomi[i] = prompt("giocatore "+(i+1)+": nome ?");
+					arCognomi[i] = prompt("cognome ?");
+					arPunti[i] = Number(prompt("punti ?"));
+					arRicezioni[i] = Number(prompt("ricezioni ?"));
+				}
+			}
+			
+			function visDati(){
+			
+				document.getElementById("txtDati").value = "";
+				for (var i=0; i < DIM; i++){
+					var testo = document.getElementById("txtDati").value;
+					testo = testo + arNomi[i];
+					testo = testo + " " + arCognomi[i];
+					testo = testo + " " + arPunti[i];
+					testo = testo + " " + arRicezioni[i];
+					testo = testo + "\n";
+					document.getElementById("txtDati").value = testo;
+					
+				}
+			
+			}
+			
+			function maxPunti(){
+			
+				var maxPunti = -1;
+				var indiceMax = -1;
+			
+				for (var i=0; i < DIM; i++){
+					if (arPunti[i] > maxPunti){
+						maxPunti = arPunti[i];
+						indiceMax = i;
+					}	
+				}
+				
+				alert(arNomi[indiceMax]+" "+arCognomi[indiceMax]);
+			
+			}
+		
+			function mediaRicezioni(){
+			
+				var somma = 0;
+			
+				for (var i=0; i < DIM; i++)
+					somma = somma + arRicezioni[i];
+				
+				media = Math.round(somma / DIM);
+				
+				alert("ricezioni medie per giocatore: "+media);
+			
+			}
+			
+		</SCRIPT>
+	</HEAD>
+	
+	<BODY>
+	
+		<INPUT type = "button" value = "inserisci dati" onclick = "insDati();"/>
+		<INPUT type = "button" value = "visualizza dati" onclick = "visDati();"/>
+		<INPUT type = "button" value = "max punti" onclick = "maxPunti();"/>
+		<INPUT type = "button" value = "media ricezioni" onclick = "mediaRicezioni();"/>
+		<BR/>
+		Elenco giocatori: <BR/>
+		<textarea id = "txtDati"> </textarea>
+	
+	</BODY>
+</HTML>

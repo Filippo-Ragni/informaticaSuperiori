@@ -1,0 +1,23 @@
+<HTML>
+    <BODY>
+        <SCRIPT>
+
+            const conversione = () => {
+
+                let ore = Number(prompt("ore: "));
+                let minuti = Number(prompt("minuti: "));
+                let secondi = Number(prompt("secondi: "));
+
+                somma = Number(ore*60*60+minuti*60+secondi);
+
+                alert (somma);
+            }
+
+        </SCRIPT>
+    </BODY>
+    <HEAD>
+
+        <INPUT type="button" value="converti" onclick="conversione();"/>
+        
+    </HEAD>
+</HTML>

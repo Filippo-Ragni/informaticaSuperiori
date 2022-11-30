@@ -1,0 +1,25 @@
+<HTML>
+    <BODY>
+        <SCRIPT>
+
+            const assoluto = (numero) => {
+
+                return numero < 0 ? -numero : numero;
+            
+            }
+
+            const calcola = () => {
+
+            let numero = prompt("numero: ");
+            alert(assoluto(numero));
+
+            }
+
+        </SCRIPT>
+    </BODY>
+    <HEAD>
+
+        <INPUT type="button" value="inserisci" onclick="calcola();"/>
+        
+    </HEAD>
+</HTML>

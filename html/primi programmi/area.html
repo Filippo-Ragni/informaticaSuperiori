@@ -1,0 +1,26 @@
+<HTML>
+	<HEAD>
+		<SCRIPT>
+			function area()
+			{
+				var h;
+				var b;
+				h=Number(document.getElementById("h").value);
+				b=Number(document.getElementById("b").value);
+				ar = (h*b/2);
+				document.getElementById("area").value = ar;
+			}
+		</SCRIPT>
+	</HEAD>
+	<BODY>
+		<FIELDSET>
+		<LEGEND>CALCOLA AREA DEL TRIANGOLO</LEGEND>
+			Altezza:<INPUT type="number" id="h"/>
+			Base:<INPUT type="number" id="b"/>
+			<BR/><BR/>
+			<INPUT type="button" value="calcola" onclick="area();"/>
+			<BR/><BR/>
+			Area:<INPUT type="number" id="area" disabled/>
+		</FIELDSET>
+	</BODY>
+</HTML>

@@ -1,0 +1,66 @@
+<HTML>
+	 <HEAD>
+		<SCRIPT>
+		
+			function benvenuto(){
+				alert("Benvenuto nella pagina di simulazione del lancio di dadi !");
+			
+			}
+			
+			
+			function lanciaDado(){
+				const MAX = 6;
+				var uscite = new Array();
+				var lanci = prompt("quanti lanci ?");
+				for (var i = 0; i < MAX; i++){
+					uscite[i] = 0;
+					}
+				for (var i=0; i < lanci; i++){
+					var num = Math.trunc(MAX*Math.random())+1;
+					uscite[num-1]++;
+				}
+				
+				document.getElementById("txtUscita1").value = uscite[0];
+				document.getElementById("txtUscita1Perc").value = uscite[0]/lanci*100;
+				document.getElementById("txtUscita2").value = uscite[1];
+				document.getElementById("txtUscita2Perc").value = uscite[1]/lanci*100;
+				document.getElementById("txtUscita3").value = uscite[2];
+				document.getElementById("txtUscita3Perc").value = uscite[2]/lanci*100;
+				document.getElementById("txtUscita4").value = uscite[3];
+				document.getElementById("txtUscita4Perc").value = uscite[3]/lanci*100;
+				document.getElementById("txtUscita5").value = uscite[4];
+				document.getElementById("txtUscita5Perc").value = uscite[4]/lanci*100;
+				document.getElementById("txtUscita6").value = uscite[5];
+				document.getElementById("txtUscita6Perc").value = uscite[5]/lanci*100;
+				
+				
+				
+			}
+		</SCRIPT>
+	 
+	 </HEAD>
+	 <BODY onload="benvenuto();">
+	 <INPUT type="button" value = "LANCIA"  onclick= "lanciaDado();"/>
+	 <BR> <BR>
+	 <FIELDSET>
+		numero di uscite 1
+	    <INPUT type="number" id = "txtUscita1"  disabled/>
+		 <INPUT type="number" id = "txtUscita1Perc"  disabled/>%<BR>
+		numero di uscite 2
+	    <INPUT type="number" id = "txtUscita2" disabled/>
+		 <INPUT type="number" id = "txtUscita2Perc"  disabled/>%<BR>
+		numero di uscite 3
+	    <INPUT type="number" id = "txtUscita3" disabled/>
+		 <INPUT type="number" id = "txtUscita3Perc"  disabled/>%<BR>
+		numero di uscite 4
+	    <INPUT type="number" id = "txtUscita4" disabled/>
+		 <INPUT type="number" id = "txtUscita4Perc"  disabled/>%<BR>
+		numero di uscite 5
+	    <INPUT type="number" id = "txtUscita5" disabled/>
+		 <INPUT type="number" id = "txtUscita5Perc"  disabled/>%<BR>
+		numero di uscite 6
+	    <INPUT type="number" id = "txtUscita6" disabled/>
+		 <INPUT type="number" id = "txtUscita6Perc"  disabled/>%<BR>
+	 </FIELDSET>
+	 </BODY>
+</HTML>

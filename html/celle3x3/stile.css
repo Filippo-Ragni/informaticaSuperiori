@@ -1,0 +1,13 @@
+table, td
+	{border-spacing:10px;
+	border-collapse:separate;}
+
+td
+	{border:3px dashed; 
+	padding:15px 5px 15px 5px;
+	font-size:32px}
+
+td.odd 
+    {background: #fce303}
+td.even 
+    {background: #0313fc}
