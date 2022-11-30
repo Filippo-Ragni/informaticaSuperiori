@@ -1,0 +1,18 @@
+<HTML>
+    <HEAD>
+        <SCRIPT>
+            const costo = () => {
+                let prezzoTotale = 35;
+                let numeroPersone = prompt("quante persone verranno alla gita scolastica? ");
+                let kilometriPercorsi = prompt("quantkilometri saranno percorsi? ");
+
+                prezzoTotale += kilometriPercorsi*0.57;
+                numeroPersone <= 0 ? (prezzoTotale += 0) : (numeroPersone <= 30 ? (prezzoTotale += numeroPersone*12) : (numeroPersone <= 41 ? (prezzoTotale += numeroPersone*9) : (prezzoTotale += 410)));
+                alert("il totale verra' a costare: " + prezzoTotale + "euro");
+            }
+        </SCRIPT>
+    </HEAD>
+    <BODY>
+        <INPUT type="button" value="calcola il preventivo" onclick="costo();"/>
+    </BODY>
+</HTML>

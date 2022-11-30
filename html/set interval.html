@@ -1,11 +1,14 @@
 <HTML>
 	<HEAD>
 		<SCRIPT>
-            var clk = 0;
-
+            let clk = 0;
+            let podioNomi = ["-", "-", "-"];
+            let podioPunteggi = [0, 0, 0];
+            
             const addClick = () => {
                 clk += 1;
             };
+
 
 			setInterval(() => 
             {
@@ -16,13 +19,34 @@
 			}
 			, 1000);
 
-			setInterval(() => 
-            {
+			setInterval(() => {
                 if (clk > document.getElementById("rec").value)
                 {
                     document.getElementById("rec").value = clk;
                 }
+/*
+                if (clk > podioPunteggi[2]){
+                    let Nome = prompt("nome del giocatore: ");
+                    let Punteggio = clk;
+                    
+                    for (i=0; i<3; i++){
+                        if (Punteggio > podioPunteggi[i]){
+                            let tempNome = podioNomi[i];
+                            podioNomi[i] = Nome;
+                            Nome = tempNome;
 
+                            let tempPunteggio = podioPunteggi[i];
+                            podioPunteggi[i] = Punteggio;
+                            let Punteggio = tempPunteggio;
+                        }
+                    }
+                }
+
+                document.getElementById("podio").value = "";
+                for (i=0; i<3; i++){
+                    document.getElementById("podio").value += [podioNomi[i] + " " + podioPunteggi[i] + "\n"];
+                }
+*/
                 clk =0;
 			}
 			, 5000);
@@ -43,6 +67,12 @@
 
         RECORD: 
         <input type="number" id="rec" value="" disabled/> 
+
+        <BR/><BR/>
+
+        PODIO:<BR/>
+		<textarea id = "podio"> </textarea>
+        
     </form> 
 	
 	</BODY>
