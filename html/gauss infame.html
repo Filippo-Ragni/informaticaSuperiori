@@ -1,0 +1,24 @@
+<HTML>
+<HEAD>
+<SCRIPT>
+	const gauss = () => {
+		let n = 0;
+	
+		do {
+			n = Number(prompt("inserisci numero: "));
+		} while (n < 0);
+		
+		let somma = 0;
+		for (let i = 1; i < n+1; i++){
+			somma += i;
+		}
+		let gaussSomma = n*(n+1)/2;
+		
+		alert(somma + " ; " + gaussSomma);
+	}
+</SCRIPT>
+</HEAD>
+<BODY>
+	<INPUT type = "button" value = "run" onclick = "gauss();"/>
+</BODY>
+</HTML>
