@@ -2,9 +2,9 @@ let coda = [];
 
 const printLista = () => {
     let string = "";
-    for (e of coda){
-        string += `<li> ${e} </li><INPUT type = "button" value = "rimuovi" onclick = "delElement();"/>`;
-    }
+    forEach ((e, i){
+        string += `<li id = "${i}esimo"> ${e} <INPUT type = "button" value = "rimuovi" onclick = "delElement(document.getElementById("${i}esimo").value);"/></li>`;
+    })
     document.getElementById("list").innerHTML = string;
 }
 
@@ -18,6 +18,7 @@ const delFirst = () => {
 	printLista();
 }
 
-const delElement = () => {
-	
+const delElement = (identifier) => {
+	coda.pop(document.getElementById(identifier).value);
+	printLista();
 }
