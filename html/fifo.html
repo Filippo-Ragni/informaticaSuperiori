@@ -1,19 +1,20 @@
+<!DOCTYPE html>
 <HTML>
 <HEAD>
-    <SCRIPT src = "tuaMadre.js"></SCRIPT>
+    <SCRIPT src = "../javascript/tuaMadre.js" defer></SCRIPT>
     <meta charset = "utf-8">
     <title>BIG FIFO 6969</title>
 </HEAD>
 <BODY>
-    <INPUT type = "text" id ="insertName"/>
+    <INPUT type = "text" id ="insertName" placeholder = "elemento da aggiungere"/>
     <INPUT type="button" value = "inserisci" onclick="addLast();"/>
     <BR/>
     
-    <INPUT type = "text" id ="delName"/>
+    <INPUT type = "text" id ="delName" placeholder = "fai scorrere la coda"/>
     <INPUT type="button" value = "rimuovi" onclick="delFirst();"/>
     <BR/>
     
-    <UL id="list">
-    </UL>
+    <OL id="list">
+    </OL>
 </BODY>
 </HTML>
